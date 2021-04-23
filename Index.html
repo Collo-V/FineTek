@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="Images/favicon.ico">
+        <link rel="stylesheet" href="FinetekCSS.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">   
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.7/css/all.css"> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"> 
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+        <style> 
+        </style>
+     
+    </head>
+    <body>
+        <div class="modal white-b">
+            <div class="message">
+                <h1>Request Quote</h1>
+                <fieldset><i class="fas fa-shapes"></i><input id="service" required onfocus="Service()"> <label for="service">select service<i id="svcdown" class="fas fa-angle-down"></i><i id="svcup"class="fas fa-angle-up"></i></label></fieldset>
+                <fieldset><i class="fas fa-folder"></i><input id="company" required><label for="company">company name*</label></fieldset>
+                <fieldset><i class="fas fa-pen"></i><input id="request" required><label for="request">request*</label></fieldset>
+               <fieldset> <i class="fas fa-pen"></i><input id="telephone" type="tel" required><label for="telephone">telephone*</label></fieldset>
+                <fieldset><i class="fas fa-envelope"></i><input id="email" type="email" required><label for="email">email*</label></fieldset>
+                <div class="key"> <p >*indicates required field </p><p>Hot-line: +254 734 34 19 62</p>   </div>
+                <div class="cancel"><button class="white-t" onclick="ModalHide()">CANCEL</button><button class="white-t" type="submit">REQUEST QUOTE</button></div>
+            </div>
+        </div>
+        <div id="body">
+        <div class="nav"><img src="Images/Logo.jpg"><b> Fineteklabs </b></div>
+        <div class="empty"></div>
+        <div class="carCont">  
+        <div class="adDot carBtn prev white-t"><i class="fas fa-angle-left"></i></div><div class="adDot carBtn next white-t"><i class="fas fa-angle-right"></i></div>     
+        <div class="carousel white-t slide1 red-b" ><p >Innovative digital solutions</p>  </div>
+        <div class="carousel white-t slide2"><p >e-commerce solutions</p>  </div>
+        <div class="carousel white-t slide3 indigo-b"><p >customised software solutions</p>  </div>
+        <div class="carousel white-t slide4 blue-b"><p>Financial Service Solutions</p>  </div>
+        <div class="carousel white-t slide5"><p id="carText">Go beyond, grow beyond</p>  </div>
+        <div class="dotCont"> <span class="dot" onclick="Current(1)"></span><span class="dot" onclick="Current(2)"></span><span class="dot" onclick="Current(3)"></span><span class="dot" onclick="Current(4)"></span><span class="dot" onclick="Current(5)"></span></div>
+        </div>
+        <div class="center"><h1 class="teal-t">Our services</h1></div>
+        <div class="adContM white-t"> 
+            <div class="vr"></div>
+            <div class="adcontright" data-aos="flip-left"><div class="adDot label blue-b"><i class="fas fa-university"></i></div>
+                <div class="adright ad1 blue-b"><div class="adText"><h1> <i class="fas fa-university"></i> Payments</h1>
+                <p>we offer financial services integration and management for e-commerce and other businesses</p></div>
+                <div class="adDot msg" onclick="ModalShow()"><i class="fas fa-plus"></i></div>
+                </div>
+            </div><br><br><br><br>
+            <div class="adcontleft" data-aos="flip-left"><div class="adDot label blue-b"><i class="fas fa-rocket"></i></div>
+                <div class="adleft ad2"><div class="adText"><h1> <i class="fas fa-rocket"></i> Business</h1>
+                <p>We offer varied business management solutions for businesses such as ERP systems,POS systems,Payroll systems to help improve efficiency, business management and operations in general</p></div>
+                <div class="adDot msg" onclick="ModalShow()"><i class="fas fa-plus"></i></div>
+                </div>
+            </div><br><br><br><br>
+            <div class="adcontright" data-aos="flip-left"><div class="adDot label blue-b"><i class="fas fa-shopping-cart"></i></div>
+                <div class="adright ad3"><div class="adText"><h1> <i class="fas fa-shopping-cart"></i> Commerce</h1>
+                <p>We help you put your business up and running through development of e-commerce solutions on the go , depending on your industry</p></div>
+                <div class="adDot msg" onclick="ModalShow()"><i class="fas fa-plus"></i></div>
+                </div>
+            </div><br><br><br><br>
+            <div class="adcontleft" data-aos="flip-left"><div class="adDot label blue-b"><i class="fas fa-cogs"></i></i></div>
+                <div class="adleft ad4"><div class="adText"><h1> <i class="fas fa-cogs"></i> agritech</h1>
+                <p>Through our innovative approach, we help customise agritech solutions to meet the industry needs for growth</p></div>
+                <div class="adDot msg" onclick="ModalShow()"><i class="fas fa-plus"></i></div>
+                </div>
+            </div><br><br><br><br>
+            <div class="adcontright"data-aos="flip-left" ><div class="adDot label blue-b"><i class="fas fa-store"></i></div>
+                <div class="adright ad5 red-b"><div class="adText"><h1> <i class="fas fa-store"></i></i>Finance</h1>
+                <p>We customise financial solutions to enable traditional businesses and informal sector persons access banking solutions</p></div>
+                <div class="adDot msg" onclick="ModalShow()"><i class="fas fa-plus"></i></div>
+                </div>
+            </div><br><br><br><br>
+            <div class="adcontleft"data-aos="flip-left"><div class="adDot label blue-b"><i class="fa fa-tv"></i><i aria-hidden="true" class="v-icon notranslate mdi mdi-monitor-cellphone theme--dark"></i></div>
+                <div class="adleft ad6 indigo-b"><div class="adText"><h1><i class="fas fa-tv"></i> custom</h1>
+                <p>We develop custom software solutions, android apps , IoT solutions to cater our customer needs</p></div>
+                <div class="adDot msg" onclick="ModalShow()"><i class="fas fa-plus"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="center"><h1 class="blue-t">Why us?</h1><p>Why work with finetek Technologies K Ltd</p></div>
+        <div class="expansion" onclick="ExpandBtn(1)" ><p><b>innovative process</b><i class="expdown fas fa-angle-down"></i><i class="expUp fas fa-angle-up"></i></p><div >we offer an innovative approach to doing our system design and implementation</div></div>
+        <div class="expansion" onclick="ExpandBtn(2)"><p><b>high experience</b><i class="expdown fas fa-angle-down"></i><i class="expUp fas fa-angle-up"></i></p><div >Our team comprises of highly experienced professionals with know how of modern tech landscape</div></div>
+        <div class="expansion" onclick="ExpandBtn(3)"><p><b>decisiveness</b><i class="expdown fas fa-angle-down"></i><i class="expUp fas fa-angle-up"></i></p><div>You give us you problem, we offer you a lasting solution.</div></div>
+        <div class="expansion" onclick="ExpandBtn(4)"><p><b>going beyond</b><i class="expdown fas fa-angle-down"></i><i class="expUp fas fa-angle-up"></i></p></button><div >we ensure as we go beyond our boundaries of innovation, research and development, we grow beyond our limits</div></div>
+        <div class="center"><h1 class="red-t">Projects</h1><p>our digital solutions </p></div>
+        <div class="projects">
+            <div data-aos="flip-left"><img src="Images/zalisha.jpg"> agritech solution with markets and finance</div>
+            <div data-aos="flip-left"><img src="Images/Nakkei.jpg">digital e-commerce and personal finance solution</div>
+            <div data-aos="flip-left"><img src="Images/Grocery.jpg">e-grocery store </div>
+        </div>
+        <div class="center"><h1 class="blue-t" onclick="Responsive()">Clients</h1> <p>our clients profile</p></div>
+        <div class="clients">
+            <div class="clientdiv"><img class="clientLogo" data-aos="fade-up" src="Images/BurukLogo.jpg"> <img class="clientLogo" data-aos="fade-up"  src="Images/FalconLogo.jpg"> <img class="clientLogo" data-aos="fade-up"  src="Images/HHourLogo.jpg"></div>
+            <div class="clientdiv"><img class="clientLogo" data-aos="fade-up"src="Images/RobinLogo.jpg"> <img class="clientLogo" data-aos="fade-up"  src="Images/PerfectPicLogo.jpg"> <img class="clientLogo" data-aos="fade-up"  src="Images/SucafinaLogo.jpg"></div>
+            <div class="clientdiv"><img class="clientLogo" data-aos="fade-up"src="Images/MagicalKenyaLogo.jpg"> <img class="clientLogo" data-aos="fade-up"  src="Images/NewHamLogo.jpg"> <img class="clientLogo" data-aos="fade-up"  src="Images/MNCLogo.jpg"></div>
+            <div class="clientdiv"><img class="clientLogo" data-aos="fade-up"src="Images/PovoLogo.jpg"> <img class="clientLogo" data-aos="fade-up"  src="Images/CanopyLogo.jpg"> <img class="clientLogo" data-aos="fade-up"  src="Images/IdeasLogo.jpg"></div>
+        </div>
+        <div class="white-t">
+            <div class="about indigo-b">
+                <div class=" centeral contact"><i class="fab fa-facebook-square"></i><i class="fab fa-twitter"></i><i class="fab fa-linkedin-in"></i></div>
+                <div class="info">
+                    <div class="centeral">Finetek is a software development company based in Nairobi Kenya, established in 2016, Finetek has had a remarkable experience in development of innovative software solutions to cater for various client needs</div>
+                    <div class="centeral">Finetek is a software development company based in Nairobi Kenya, established in 2016, Finetek has had a remarkable experience in development of innovative software solutions to cater for various client needs</div>
+                </div>
+            </div>
+            <div class=" blue-b centeral footer"><b>2021 — Finetek Technologies K Ltd info@fineteklabs.com +254 734 34 1962</b></div>
+        </div>
+    </div>
+        <script src="FinetekJS.js">
+          
+        </script>
+
+    </body>
+</html>
