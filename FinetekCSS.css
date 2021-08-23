@@ -56,7 +56,7 @@
             .expansion{padding-left:14px;border: solid  .5px #dbd6d6;height: 50px;overflow-y: hidden;position: relative;}
             .expansion p i{float: right;margin-right: 20px;color: #a09999;}
             .expansion:active  i{display: none;}
-            .expUp,#svcup{display: none;}
+            .expUp{display: none;}#svcup{display:none}
             .projects{width: 100%;display: flex;align-items: center;flex-direction: row;justify-content: space-between;} 
             .projects div{ text-align: center;width: 30%;}.projects div img{width: 100%;border: solid 1px rgb(228, 171, 171)} .projects div p{align-self: flex-end;}
             .clients{width: 100%; display:flex;flex-direction: column;} 
